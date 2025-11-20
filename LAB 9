@@ -1,0 +1,29 @@
+a.	Write a Pandas program to add, subtract, multiple and divide two Pandas Series.
+Code:- import pandas as pd
+s1 = pd.Series([10, 20, 30, 40, 50])
+s2 = pd.Series([2, 4, 6, 8, 10])
+add = s1 + s2 sub = s1 - s2 mul = s1 * s2 div = s1 / s2
+print("Addition:\n", add) print("Subtraction:\n", sub) print("Multiplication:\n", mul) print("Division:\n", div)
+
+b.	Write a Pandas program to convert a dictionary to a Pandas series. Code:- import pandas as pd
+data = {'a': 100, 'b': 200, 'c': 300}
+series = pd.Series(data)
+print(series)
+
+c.	Write a Pandas program to create a series from a list, numpy array and dict Code:- import pandas as pd
+import numpy as np
+lst = [5, 10, 15, 20]
+arr = np.array([25, 30, 35, 40])
+dct = {'x': 45, 'y': 50, 'z': 55}
+s_list = pd.Series(lst) s_array = pd.Series(arr) s_dict = pd.Series(dct)
+print("Series from list:\n", s_list) print("Series from NumPy array:\n", s_array) print("Series from dictionary:\n", s_dict) 
+
+d.	Write a Pandas program to stack two series vertically and horizontally Code:- import pandas as pd
+s1 = pd.Series([1, 2, 3])
+s2 = pd.Series([4, 5, 6])
+vertical = pd.concat([s1, s2], ignore_index=True) horizontal = pd.concat([s1, s2], axis=1)
+print("Vertical Stack:\n", vertical) print("Horizontal Stack:\n", horizontal)
+ 
+
+
+ 

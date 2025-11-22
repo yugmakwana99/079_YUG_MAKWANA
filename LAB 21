@@ -1,0 +1,16 @@
+import requests
+
+
+class SimpleAPIClient: def  init (self):
+self.base_url = "https://jsonplaceholder.typicode.com"
+ 
+
+
+def get_posts(self):
+response = requests.get(f"{self.base_url}/posts") return response.json()
+
+def create_post(self, title, body, user_id):
+data = {"title": title, "body": body, "userId": user_id} response = requests.post(f"{self.base_url}/posts", json=data) return response.json()
+
+client = SimpleAPIClient() print(client.get_posts()[:2])
+print(client.create_post("Hello", "This is a test post", 1))
